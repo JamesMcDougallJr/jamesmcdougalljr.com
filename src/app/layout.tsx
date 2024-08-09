@@ -40,34 +40,34 @@ const FooterLink = ({ title, description, href, external = false }: FooterLinkPr
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-          James McDougall: Full Stack Software Engineer
-        </div>
-        <body className={inter.className}>{children}</body>
-        <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-          <FooterLink 
-            href="/current"
-            title='My Work'
-            description='Learn more about my current position and up-to-date experience.'
-          />
-          <FooterLink 
-            href="/experience"
-            title='My Experience'
-            description='Look at a big picture of my professional life.'
-          />
-          <FooterLink 
-            href='/timeline' 
-            title='My Life'
-            description='Learn more about what drives me.'
-          />
-          <FooterLink
-            href="https://linkedin.com/in/james-mcdouga"
-            external
-            title='Connect'
-            description='Connect with me on social media.'
-          />
-        </div>
-      </main>
+    <main className="flex min-h-screen flex-col items-center p-10 bg-sky-200 text-slate-900">
+      <div className="z-10 w-full items-center justify-between font-mono text-lg lg:flex">
+        James McDougall: Full Stack Software Engineer
+      </div>
+      <body className={`${inter.className}`}>{children}</body>
+      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+        <FooterLink
+          href="/"
+          title='Home'
+          description='Learn more about me'
+        />
+        <FooterLink
+          href="/smart_spend"
+          title='Smart Spend'
+          description='Learn more about the main project I worked on at Affinipay.'
+        />
+        <FooterLink
+          href="/workwise"
+          title='WorkWise'
+          description='Learn more about WorkWise App, an application that helps builders create bids using AI.'
+        />
+        <FooterLink
+          href="https://linkedin.com/in/james-mcdouga"
+          external
+          title='Connect'
+          description='Connect with me on social media.'
+        />
+      </div>
+    </main>
   );
 }
